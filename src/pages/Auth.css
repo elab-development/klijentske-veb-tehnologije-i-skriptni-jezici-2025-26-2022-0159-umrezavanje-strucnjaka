@@ -101,3 +101,15 @@
   width: 200px;
   height: auto;
 }
+
+.register-card {
+  width: 370px;
+}
+
+.register-card .auth-form {
+  gap: 14px;
+}
+
+.register-card .btn {
+  margin-top: 10px;
+}
