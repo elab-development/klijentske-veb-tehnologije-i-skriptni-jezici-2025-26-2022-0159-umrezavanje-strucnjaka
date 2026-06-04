@@ -1,0 +1,43 @@
+.user-card {
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.user-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6f35e8, #2d65e8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.user-card h3 {
+  font-size: 17px;
+  color: #111827;
+}
+
+.user-card p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 3px 0;
+}
+
+.user-card span {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.user-card.compact {
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 22px;
+}

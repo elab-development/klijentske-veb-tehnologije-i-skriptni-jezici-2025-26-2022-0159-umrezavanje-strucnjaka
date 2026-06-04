@@ -7,6 +7,7 @@ import OpportunitiesPage from "./pages/OpportunitiesPage";
 import OpportunityDetailsPage from "./pages/OpportunityDetailsPage";
 import MessagesPage from "./pages/MessagesPage";
 import ProfilePage from "./pages/ProfilePage";
+import MainLayout from "./layouts/MainLayout";
 
 function App() {
   return (
@@ -15,14 +16,14 @@ function App() {
         <Route path="/" element={<LoginPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/opportunities" element={<OpportunitiesPage />} />
-        <Route
-          path="/opportunities/:id"
-          element={<OpportunityDetailsPage />}
-        />
-        <Route path="/messages" element={<MessagesPage />} />
-        <Route path="/profile" element={<ProfilePage />} />
+
+        <Route element={<MainLayout />}>
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/opportunities" element={<OpportunitiesPage />} />
+          <Route path="/opportunities/:id" element={<OpportunityDetailsPage />} />
+          <Route path="/messages" element={<MessagesPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
