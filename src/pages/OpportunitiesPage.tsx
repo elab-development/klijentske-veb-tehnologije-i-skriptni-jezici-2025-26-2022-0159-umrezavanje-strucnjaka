@@ -6,6 +6,7 @@ import "./OpportunitiesPage.css";
 function OpportunitiesPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedType, setSelectedType] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
 
   const itemsPerPage = 3;
@@ -18,7 +19,11 @@ function OpportunitiesPage() {
     const matchesType =
       selectedType === "All" || opportunity.type === selectedType;
 
-    return matchesSearch && matchesType;
+    const matchesCategory =
+      selectedCategory === "All" ||
+      opportunity.category === selectedCategory;
+
+    return matchesSearch && matchesType && matchesCategory;
   });
 
   const totalPages = Math.ceil(filteredOpportunities.length / itemsPerPage);
@@ -61,6 +66,30 @@ function OpportunitiesPage() {
               onClick={() => handleFilterChange(type)}
             >
               {type}
+            </button>
+          ))}
+        </div>
+        <div className="category-filters">
+          {[
+            "All",
+            "Tech",
+            "Design",
+            "Backend",
+            "Marketing",
+            "Management",
+            "Data",
+          ].map((category) => (
+            <button
+              key={category}
+              className={
+                selectedCategory === category ? "active" : ""
+              }
+              onClick={() => {
+                setSelectedCategory(category);
+                setCurrentPage(1);
+              }}
+            >
+              {category}
             </button>
           ))}
         </div>

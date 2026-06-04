@@ -22,12 +22,7 @@
   gap: 28px;
 }
 
-.opportunities-controls {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
+
 
 .opportunities-controls input {
   width: 360px;
@@ -44,7 +39,7 @@
   gap: 12px;
 }
 
-.opportunity-filters button,
+
 .pagination button {
   border: none;
   border-radius: 10px;
@@ -55,10 +50,7 @@
   cursor: pointer;
 }
 
-.opportunity-filters button.active {
-  background: #6f35e8;
-  color: white;
-}
+
 
 .pagination {
   display: flex;
@@ -75,4 +67,64 @@
 .pagination button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+/* .category-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+} */
+
+
+
+/**/
+
+.opportunities-controls {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.filters-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.opportunity-filters,
+.category-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.opportunity-filters button {
+  border: 1px solid #6f35e8;
+  border-radius: 10px;
+  padding: 10px 18px;
+  background: white;
+  color: #6f35e8;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.opportunity-filters button.active {
+  background: #6f35e8;
+  color: white;
+}
+
+.category-filters button {
+  border: 1px solid #50b878;
+  border-radius: 10px;
+  padding: 10px 18px;
+  background: white;
+  color: #318a58;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.category-filters button.active {
+  background: #50b878;
+  color: white;
 }
