@@ -2,6 +2,9 @@ import UserCard from "../components/UserCard";
 import OpportunityCard from "../components/OpportunityCard";
 import { recommendedUsers } from "../data/users";
 import { opportunities } from "../data/opportunities";
+import { useEffect, useState } from "react";
+import type { User } from "../interfaces/User";
+import { fetchRecommendedUsers } from "../services/userService";
 import "./DashboardPage.css";
 
 function DashboardPage() {
@@ -12,7 +15,13 @@ function DashboardPage() {
     : {
       fullName: "Guest User",
     };
+  const [apiUsers, setApiUsers] = useState<User[]>([]);
 
+  useEffect(() => {
+    fetchRecommendedUsers()
+      .then((users) => setApiUsers(users))
+      .catch(() => setApiUsers(recommendedUsers));
+  }, []);
   return (
     <div className="dashboard-page">
       <section className="dashboard-header">
@@ -33,7 +42,7 @@ function DashboardPage() {
             <button>View all</button>
           </div>
 
-          {recommendedUsers.slice(0, 2).map((user) => (
+          {apiUsers.slice(0, 2).map((user) => (
             <UserCard key={user.id} user={user} compact />
           ))}
         </div>

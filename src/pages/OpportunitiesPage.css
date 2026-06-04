@@ -21,3 +21,58 @@
   flex-direction: column;
   gap: 28px;
 }
+
+.opportunities-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.opportunities-controls input {
+  width: 360px;
+  height: 44px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 0 14px;
+  font-size: 14px;
+  outline: none;
+}
+
+.opportunity-filters {
+  display: flex;
+  gap: 12px;
+}
+
+.opportunity-filters button,
+.pagination button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  background: white;
+  color: #6f35e8;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.opportunity-filters button.active {
+  background: #6f35e8;
+  color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.pagination span {
+  color: #6b7280;
+  font-weight: 700;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
