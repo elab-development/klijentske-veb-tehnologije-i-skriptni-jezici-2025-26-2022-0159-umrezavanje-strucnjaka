@@ -2,6 +2,18 @@ import { Search } from "lucide-react";
 import "./TopBar.css";
 
 function TopBar() {
+  const savedUser = localStorage.getItem("loggedUser");
+  const loggedUser = savedUser
+    ? JSON.parse(savedUser)
+    : {
+      fullName: "Guest User",
+    };
+    const initials = loggedUser.fullName
+    .split(" ")
+    .map((name: string) => name[0])
+    .join("")
+    .toUpperCase();
+    
   return (
     <header className="topbar">
       <div className="topbar-search">
@@ -13,8 +25,8 @@ function TopBar() {
       </div>
 
       <div className="topbar-user">
-        <div className="topbar-avatar"></div>
-        <span>Petar Petrović</span>
+        <div className="topbar-avatar">{initials}</div>
+        <span>{loggedUser.fullName}</span>
       </div>
     </header>
   );

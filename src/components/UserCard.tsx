@@ -1,6 +1,7 @@
 import type { User } from "../interfaces/User";
 import "./UserCard.css";
 
+
 interface UserCardProps {
   user: User;
   compact?: boolean;

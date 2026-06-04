@@ -21,6 +21,18 @@ function RegisterPage() {
       return;
     }
 
+    const user = {
+      fullName,
+      email,
+      username,
+      password,
+      title: "Frontend Developer",
+      location: "Belgrade, Serbia",
+    };
+
+    localStorage.setItem("registeredUser", JSON.stringify(user));
+    localStorage.setItem("loggedUser", JSON.stringify(user));
+
     navigate("/dashboard");
   }
 

@@ -44,9 +44,13 @@
 }
 
 .topbar-avatar {
-  width: 58px;
-  height: 58px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  background: #d9dde2;
-  position: relative;
+  background: linear-gradient(135deg, #6f35e8, #2d65e8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
 }

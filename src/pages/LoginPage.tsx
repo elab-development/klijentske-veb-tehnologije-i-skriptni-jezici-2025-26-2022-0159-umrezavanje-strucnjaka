@@ -19,7 +19,28 @@ function LoginPage() {
       return;
     }
 
-    navigate("/dashboard");
+    const savedUser = localStorage.getItem("registeredUser");
+
+    if (!savedUser) {
+      alert("User not found");
+      return;
+    }
+
+    const registeredUser = JSON.parse(savedUser);
+
+    if (
+      registeredUser.email === email &&
+      registeredUser.password === password
+    ) {
+      localStorage.setItem(
+        "loggedUser",
+        JSON.stringify(registeredUser)
+      );
+
+      navigate("/dashboard");
+    } else {
+      alert("Invalid email or password");
+    }
   }
 
   return (

@@ -1,0 +1,23 @@
+.opportunities-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.opportunities-header h1 {
+  font-size: 30px;
+  color: #050505;
+}
+
+.opportunities-header p {
+  margin-top: 6px;
+  font-size: 16px;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.opportunities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}

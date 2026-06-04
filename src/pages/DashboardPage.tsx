@@ -2,14 +2,21 @@ import UserCard from "../components/UserCard";
 import OpportunityCard from "../components/OpportunityCard";
 import { recommendedUsers } from "../data/users";
 import { opportunities } from "../data/opportunities";
-
 import "./DashboardPage.css";
 
 function DashboardPage() {
+  const savedUser = localStorage.getItem("loggedUser");
+
+  const loggedUser = savedUser
+    ? JSON.parse(savedUser)
+    : {
+      fullName: "Guest User",
+    };
+
   return (
     <div className="dashboard-page">
       <section className="dashboard-header">
-        <h1>Welcome back, Petar Petrović!</h1>
+        <h1>Welcome back, {loggedUser.fullName}!</h1>
         <p>Here is what’s happening in your network.</p>
       </section>
 
@@ -30,19 +37,20 @@ function DashboardPage() {
             <UserCard key={user.id} user={user} compact />
           ))}
         </div>
+      </section>
+
+      <section className="latest-card">
+        <div className="card-heading">
+          <h2>Latest Opportunities</h2>
+          <button>View all</button>
+        </div>
 
         <div className="opportunities-row">
-          {opportunities.slice(0, 3).map((opportunity, index) => (
-            <>
-              <OpportunityCard
-                key={opportunity.id}
-                opportunity={opportunity}
-                mini
-              />
-
-              {index < 2 && <div className="separator"></div>}
-            </>
-          ))}
+          <OpportunityCard opportunity={opportunities[0]} mini />
+          <div className="separator"></div>
+          <OpportunityCard opportunity={opportunities[1]} mini />
+          <div className="separator"></div>
+          <OpportunityCard opportunity={opportunities[2]} mini />
         </div>
       </section>
     </div>
