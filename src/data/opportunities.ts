@@ -8,8 +8,19 @@ export const opportunities: Opportunity[] = [
     location: "Belgrade, Serbia",
     type: "Full time",
     category: "Tech",
-    description:
-      "Develop modern and responsive web applications using React and TypeScript."
+    description: "Develop modern and responsive web applications using React and TypeScript.",
+    responsibilities: [
+      "Build reusable frontend components",
+      "Collaborate with UI/UX designers",
+      "Optimize applications for speed and usability",
+    ],
+    requirements: [
+      "React and TypeScript knowledge",
+      "Good understanding of HTML and CSS",
+      "Basic Git experience",
+    ],
+    experience: "Junior to Mid-level",
+    salary: "€1,500 - €2,500 / month",
   },
   {
     id: 2,
@@ -18,8 +29,19 @@ export const opportunities: Opportunity[] = [
     location: "Novi Sad, Serbia",
     type: "Part time",
     category: "Design",
-    description:
-      "Create intuitive interfaces and improve user experience for digital products."
+    description: "Create intuitive interfaces and improve user experience for digital products.",
+    responsibilities: [
+      "Design wireframes and prototypes",
+      "Conduct user research",
+      "Work closely with development teams",
+    ],
+    requirements: [
+      "Figma experience",
+      "Understanding of user-centered design",
+      "Strong visual design skills",
+    ],
+    experience: "Junior",
+    salary: "€700 - €1,200 / month",
   },
   {
     id: 3,
@@ -28,8 +50,19 @@ export const opportunities: Opportunity[] = [
     location: "Belgrade, Serbia",
     type: "Full time",
     category: "Backend",
-    description:
-      "Build scalable APIs and maintain backend services using modern technologies."
+    description: "Build scalable APIs and maintain backend services using modern technologies.",
+    responsibilities: [
+      "Develop REST APIs",
+      "Maintain database models",
+      "Improve backend performance",
+    ],
+    requirements: [
+      "Node.js or Laravel experience",
+      "Database knowledge",
+      "Understanding of API architecture",
+    ],
+    experience: "Mid-level",
+    salary: "€2,000 - €3,200 / month",
   },
   {
     id: 4,
@@ -38,8 +71,19 @@ export const opportunities: Opportunity[] = [
     location: "Remote",
     type: "Remote",
     category: "Management",
-    description:
-      "Lead product strategy and collaborate with cross-functional teams."
+    description: "Lead product strategy and coordinate cross-functional product teams.",
+    responsibilities: [
+      "Define product roadmap",
+      "Communicate with stakeholders",
+      "Prioritize product features",
+    ],
+    requirements: [
+      "Product management experience",
+      "Strong communication skills",
+      "Understanding of agile workflows",
+    ],
+    experience: "Senior",
+    salary: "€3,000 - €4,500 / month",
   },
   {
     id: 5,
@@ -48,8 +92,19 @@ export const opportunities: Opportunity[] = [
     location: "Niš, Serbia",
     type: "Part time",
     category: "Marketing",
-    description:
-      "Plan and execute digital marketing campaigns across multiple platforms."
+    description: "Plan and execute digital marketing campaigns across multiple platforms.",
+    responsibilities: [
+      "Create campaign plans",
+      "Analyze social media performance",
+      "Prepare marketing reports",
+    ],
+    requirements: [
+      "Digital marketing knowledge",
+      "Social media experience",
+      "Basic analytics skills",
+    ],
+    experience: "Junior to Mid-level",
+    salary: "€600 - €1,100 / month",
   },
   {
     id: 6,
@@ -58,8 +113,19 @@ export const opportunities: Opportunity[] = [
     location: "Belgrade, Serbia",
     type: "Full time",
     category: "Tech",
-    description:
-      "Develop and maintain mobile applications for Android and iOS."
+    description: "Develop and maintain mobile applications for Android and iOS platforms.",
+    responsibilities: [
+      "Build mobile app features",
+      "Fix bugs and improve stability",
+      "Collaborate with backend developers",
+    ],
+    requirements: [
+      "React Native or Flutter knowledge",
+      "Mobile UI understanding",
+      "API integration experience",
+    ],
+    experience: "Mid-level",
+    salary: "€1,800 - €3,000 / month",
   },
   {
     id: 7,
@@ -68,8 +134,19 @@ export const opportunities: Opportunity[] = [
     location: "Remote",
     type: "Remote",
     category: "Design",
-    description:
-      "Create visual content and branding materials for various clients."
+    description: "Create visual content, branding materials and social media designs.",
+    responsibilities: [
+      "Design brand visuals",
+      "Prepare social media creatives",
+      "Create marketing assets",
+    ],
+    requirements: [
+      "Adobe Photoshop or Illustrator",
+      "Creative portfolio",
+      "Attention to detail",
+    ],
+    experience: "Junior",
+    salary: "€800 - €1,400 / month",
   },
   {
     id: 8,
@@ -78,8 +155,19 @@ export const opportunities: Opportunity[] = [
     location: "Kragujevac, Serbia",
     type: "Full time",
     category: "Data",
-    description:
-      "Analyze business data and provide actionable insights for decision-making."
+    description: "Analyze business data and provide actionable insights for decision-making.",
+    responsibilities: [
+      "Prepare data reports",
+      "Create dashboards",
+      "Identify business trends",
+    ],
+    requirements: [
+      "Excel or SQL knowledge",
+      "Analytical thinking",
+      "Basic visualization skills",
+    ],
+    experience: "Junior to Mid-level",
+    salary: "€1,300 - €2,200 / month",
   },
   {
     id: 9,
@@ -88,8 +176,19 @@ export const opportunities: Opportunity[] = [
     location: "Remote",
     type: "Remote",
     category: "Backend",
-    description:
-      "Manage cloud infrastructure and automate deployment pipelines."
+    description: "Manage cloud infrastructure and automate deployment pipelines.",
+    responsibilities: [
+      "Maintain CI/CD pipelines",
+      "Monitor cloud services",
+      "Improve deployment processes",
+    ],
+    requirements: [
+      "Docker knowledge",
+      "Linux basics",
+      "Cloud platform experience",
+    ],
+    experience: "Mid-level",
+    salary: "€2,400 - €3,800 / month",
   },
   {
     id: 10,
@@ -98,57 +197,17 @@ export const opportunities: Opportunity[] = [
     location: "Novi Sad, Serbia",
     type: "Part time",
     category: "Marketing",
-    description:
-      "Produce engaging content for social media and online communities."
-  },
-  {
-    id: 11,
-    title: "Cybersecurity Analyst",
-    company: "SecureIT",
-    location: "Belgrade, Serbia",
-    type: "Full time",
-    category: "Tech",
-    description:
-      "Monitor security threats and improve organizational cybersecurity."
-  },
-  {
-    id: 12,
-    title: "Project Coordinator",
-    company: "Business Solutions",
-    location: "Remote",
-    type: "Remote",
-    category: "Management",
-    description:
-      "Coordinate project activities and ensure timely delivery of tasks."
-  },
-  {
-    id: 13,
-    title: "Machine Learning Engineer",
-    company: "AI Labs",
-    location: "Belgrade, Serbia",
-    type: "Full time",
-    category: "Data",
-    description:
-      "Design and deploy machine learning models for real-world applications."
-  },
-  {
-    id: 14,
-    title: "Brand Strategist",
-    company: "Vision Marketing",
-    location: "Niš, Serbia",
-    type: "Part time",
-    category: "Marketing",
-    description:
-      "Develop branding strategies and strengthen brand positioning."
-  },
-  {
-    id: 15,
-    title: "Full Stack Developer",
-    company: "InnovateX",
-    location: "Remote",
-    type: "Remote",
-    category: "Tech",
-    description:
-      "Work across frontend and backend technologies to build complete solutions."
-  }
-];
+    description: "Produce engaging content for social media and online communities.",
+    responsibilities: [
+      "Write content ideas",
+      "Create short-form posts",
+      "Track audience engagement",
+    ],
+    requirements: [
+      "Creative writing skills",
+      "Social media knowledge",
+      "Basic video editing is a plus",
+    ],
+    experience: "Junior",
+    salary: "€500 - €1,000 / month",
+  }]

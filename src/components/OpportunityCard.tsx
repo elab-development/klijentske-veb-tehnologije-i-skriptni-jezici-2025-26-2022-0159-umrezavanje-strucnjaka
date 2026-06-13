@@ -1,5 +1,6 @@
 import { MapPin } from "lucide-react";
 import type { Opportunity } from "../interfaces/Opportunity";
+import { useNavigate } from "react-router-dom";
 import "./OpportunityCard.css";
 
 interface OpportunityCardProps {
@@ -30,6 +31,7 @@ function OpportunityCard({
   const categoryClass = getCategoryClass(
     opportunity.category
   );
+  const navigate = useNavigate();
   const iconLetter = opportunity.category[0];
   if (mini) {
     return (
@@ -77,7 +79,12 @@ function OpportunityCard({
         </div>
       </div>
 
-      <button className="opportunity-view-btn">View</button>
+      <button
+        className="opportunity-view-btn"
+        onClick={() => navigate(`/opportunities/${opportunity.id}`)}
+      >
+        View
+      </button>
     </article>
   );
 }

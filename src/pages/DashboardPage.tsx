@@ -5,11 +5,12 @@ import { opportunities } from "../data/opportunities";
 import { useEffect, useState } from "react";
 import type { User } from "../interfaces/User";
 import { fetchRecommendedUsers } from "../services/userService";
+import { useNavigate } from "react-router-dom";
 import "./DashboardPage.css";
 
 function DashboardPage() {
   const savedUser = localStorage.getItem("loggedUser");
-
+  const navigate = useNavigate();
   const loggedUser = savedUser
     ? JSON.parse(savedUser)
     : {
@@ -51,7 +52,9 @@ function DashboardPage() {
       <section className="latest-card">
         <div className="card-heading">
           <h2>Latest Opportunities</h2>
-          <button>View all</button>
+          <button onClick={() => navigate("/opportunities")}>
+            View all
+          </button>
         </div>
 
         <div className="opportunities-row">

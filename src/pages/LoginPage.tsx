@@ -8,13 +8,13 @@ import logo from "../assets/LOGO.png";
 function LoginPage() {
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState("");
+  const [identifier, setIdentifier] = useState("");
   const [password, setPassword] = useState("");
 
   function handleLogin(event: React.FormEvent) {
     event.preventDefault();
 
-    if (!email || !password) {
+    if (!identifier || !password) {
       alert("Please fill in all fields.");
       return;
     }
@@ -29,7 +29,7 @@ function LoginPage() {
     const registeredUser = JSON.parse(savedUser);
 
     if (
-      registeredUser.email === email &&
+      (registeredUser.email === identifier || registeredUser.username===identifier)&&
       registeredUser.password === password
     ) {
       localStorage.setItem(
@@ -54,11 +54,11 @@ function LoginPage() {
         <p>Connect with professionals worldwide</p>
         <form onSubmit={handleLogin} className="auth-form">
           <InputField
-            label="Email"
-            type="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={setEmail}
+            label="Email or username"
+            type="text"
+            placeholder="Enter your email or username"
+            value={identifier}
+            onChange={setIdentifier}
           />
 
           <InputField

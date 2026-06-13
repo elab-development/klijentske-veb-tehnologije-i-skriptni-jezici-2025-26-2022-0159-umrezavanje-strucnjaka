@@ -69,16 +69,6 @@
   cursor: not-allowed;
 }
 
-/* .category-filters {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-} */
-
-
-
-/**/
-
 .opportunities-controls {
   display: grid;
   grid-template-columns: 360px 1fr;

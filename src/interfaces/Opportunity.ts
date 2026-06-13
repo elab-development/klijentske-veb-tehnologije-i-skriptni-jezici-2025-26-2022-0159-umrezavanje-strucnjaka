@@ -6,4 +6,8 @@ export interface Opportunity {
   type: string;
   category: string;
   description: string;
+  responsibilities: string[];
+  requirements: string[];
+  experience: string;
+  salary: string;
 }

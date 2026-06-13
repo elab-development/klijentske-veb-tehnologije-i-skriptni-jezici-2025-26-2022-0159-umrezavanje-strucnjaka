@@ -13,6 +13,12 @@ function RegisterPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  const initials = fullName
+    .split(" ")
+    .map((name: string) => name[0])
+    .join("")
+    .toUpperCase();
+
   function handleRegister(event: React.FormEvent) {
     event.preventDefault();
 
@@ -23,11 +29,11 @@ function RegisterPage() {
 
     const user = {
       fullName,
-      email,
       username,
+      email,
       password,
-      title: "Frontend Developer",
-      location: "Belgrade, Serbia",
+      connections:0,
+      avatar:initials
     };
 
     localStorage.setItem("registeredUser", JSON.stringify(user));
