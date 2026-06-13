@@ -1,0 +1,168 @@
+.expert-details-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.expert-header-card,
+.expert-card {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.14);
+}
+
+.expert-header-card {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.expert-avatar {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #7c6cf2 0%, #4d5df1 100%);
+  color: white;
+  font-size: 32px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expert-info {
+  flex: 1;
+}
+
+.expert-info h1 {
+  font-size: 32px;
+  color: #050505;
+}
+
+.expert-info p {
+  font-size: 19px;
+  color: #6f35e8;
+  font-weight: 700;
+  margin: 6px 0 12px;
+}
+
+.expert-meta {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.expert-meta span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.expert-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.connect-btn,
+.message-btn {
+  width: 140px;
+  height: 42px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.connect-btn {
+  border: none;
+  background: linear-gradient(180deg, #7c6cf2 0%, #4d5df1 100%);
+  color: white;
+}
+
+.message-btn {
+  border: 1px solid #6f35e8;
+  background: white;
+  color: #6f35e8;
+}
+
+.expert-content {
+  display: grid;
+  grid-template-columns: 1.45fr 0.75fr;
+  gap: 28px;
+}
+
+.expert-main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.expert-card {
+  padding: 26px;
+}
+
+.expert-card h2 {
+  font-size: 22px;
+  color: #050505;
+  margin-bottom: 16px;
+}
+
+.expert-card p {
+  color: #6b7280;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.expert-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.expert-skills span {
+  background: #ede9ff;
+  color: #6f35e8;
+  padding: 8px 16px;
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.expert-experience {
+  background: #f4f5f8;
+  padding: 18px;
+  border-radius: 14px;
+}
+
+.expert-experience h3 {
+  font-size: 17px;
+  color: #111;
+}
+
+.expert-experience p {
+  margin-top: 6px;
+  color: #9ca3af;
+  font-weight: 700;
+}
+
+.expert-stat {
+  background: #f4f5f8;
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 14px;
+}
+
+.expert-stat strong {
+  display: block;
+  color: #6f35e8;
+  font-size: 28px;
+}
+
+.expert-stat span {
+  color: #6b7280;
+  font-weight: 600;
+}

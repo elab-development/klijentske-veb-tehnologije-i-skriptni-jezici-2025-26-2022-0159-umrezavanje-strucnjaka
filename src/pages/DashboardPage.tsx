@@ -40,7 +40,6 @@ function DashboardPage() {
         <div className="recommended-card">
           <div className="card-heading">
             <h2>Recommended for you</h2>
-            <button>View all</button>
           </div>
 
           {apiUsers.length === 0 ? (

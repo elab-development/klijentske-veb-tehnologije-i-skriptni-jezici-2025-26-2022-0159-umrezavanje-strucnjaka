@@ -1,4 +1,5 @@
 import type { User } from "../interfaces/User";
+import { useNavigate } from "react-router-dom";
 import "./UserCard.css";
 
 interface UserCardProps {
@@ -7,6 +8,12 @@ interface UserCardProps {
 }
 
 function UserCard({ user, compact = false }: UserCardProps) {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate(`/experts/${user.id}`);
+  }
+
   const initials = user.fullName
     .split(" ")
     .map((name: string) => name[0])
@@ -14,7 +21,10 @@ function UserCard({ user, compact = false }: UserCardProps) {
     .toUpperCase();
 
   return (
-    <article className={compact ? "user-card compact" : "user-card"}>
+    <article
+      className={compact ? "user-card compact" : "user-card"}
+      onClick={handleClick}
+    >
       <div className="user-avatar">{initials}</div>
 
       <div>
