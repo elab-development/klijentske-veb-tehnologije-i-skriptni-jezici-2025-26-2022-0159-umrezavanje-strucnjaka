@@ -21,3 +21,21 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
+
+.experts-search {
+  width: 420px;
+  height: 44px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 0 14px;
+  font-size: 14px;
+  outline: none;
+}
+
+.experts-search:focus {
+  border-color: #6f35e8;
+}
+
+.experts-search::placeholder {
+  color: #9ca3af;
+}

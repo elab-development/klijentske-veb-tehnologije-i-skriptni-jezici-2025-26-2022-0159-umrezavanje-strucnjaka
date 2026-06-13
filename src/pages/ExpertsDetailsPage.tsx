@@ -77,7 +77,7 @@ function ExpertDetailsPage() {
             <h2>Profile Stats</h2>
 
             <div className="expert-stat">
-              <strong>{user.connections}</strong>
+              <strong>{user.connections.length}</strong>
               <span>Connections</span>
             </div>
 

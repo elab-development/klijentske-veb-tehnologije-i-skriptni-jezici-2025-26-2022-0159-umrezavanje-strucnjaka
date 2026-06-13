@@ -8,19 +8,27 @@ function ProfilePage() {
   const loggedUser = savedUser
     ? JSON.parse(savedUser)
     : {
-      fullName: "Guest User",
-      email: "guest@example.com",
-      username: "guest",
-      title: "New Member",
-      location: "Belgrade, Serbia",
-    };
+        id: 0,
+        fullName: "Guest User",
+        email: "guest@example.com",
+        username: "guest",
+        title: "New Member",
+        location: "Belgrade, Serbia",
+        about: "New member of ExpertConnect.",
+        experience: "No experience added yet.",
+        skills: [],
+        connections: [],
+      };
 
   const initials = loggedUser.fullName
     .split(" ")
     .map((name: string) => name[0])
     .join("")
     .toUpperCase();
-  const connectionsCount = users.length;
+
+  const connectedUsers = users.filter((user) =>
+    loggedUser.connections?.includes(user.id)
+  );
 
   return (
     <div className="profile-page">
@@ -34,9 +42,10 @@ function ProfilePage() {
           <br />
           <span>{loggedUser.email}</span>
         </div>
+
         <div className="profile-stats">
           <div className="profile-stat">
-            <h3>{connectionsCount}</h3>
+            <h3>{loggedUser.connections?.length || 0}</h3>
             <span>Connections</span>
           </div>
         </div>
@@ -45,30 +54,26 @@ function ProfilePage() {
       <section className="profile-grid">
         <div className="profile-main-card">
           <h2>About</h2>
-          <p>
-            Passionate professional focused on building modern, responsive and
-            user-friendly digital products.
-          </p>
+          <p>{loggedUser.about}</p>
 
           <h2>Skills</h2>
           <div className="skills-list">
-            <span>React</span>
-            <span>TypeScript</span>
-            <span>UI/UX</span>
-            <span>CSS</span>
+            {loggedUser.skills?.map((skill: string) => (
+              <span key={skill}>{skill}</span>
+            ))}
           </div>
 
           <h2>Experience</h2>
           <div className="experience-item">
             <h3>{loggedUser.title}</h3>
-            <p>Data Flow · 2022 - Present</p>
+            <p>{loggedUser.experience}</p>
           </div>
         </div>
 
         <div className="profile-side-card">
           <h2>Connections</h2>
 
-          {users.slice(0, 3).map((user) => (
+          {connectedUsers.map((user) => (
             <UserCard key={user.id} user={user} compact />
           ))}
         </div>

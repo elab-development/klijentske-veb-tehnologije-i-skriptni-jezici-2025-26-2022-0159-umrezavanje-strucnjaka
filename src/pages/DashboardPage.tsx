@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import type { User } from "../interfaces/User";
 import { fetchRecommendedUsers } from "../services/userService";
 import { useNavigate } from "react-router-dom";
+import { fetchQuote } from "../services/quoteService";
 import "./DashboardPage.css";
 
 function DashboardPage() {
@@ -17,11 +18,28 @@ function DashboardPage() {
       fullName: "Guest User",
     };
   const [apiUsers, setApiUsers] = useState<User[]>([]);
-
+  const [quote, setQuote] = useState({
+    content: "",
+    author: "",
+  });
   useEffect(() => {
     fetchRecommendedUsers()
       .then((users) => setApiUsers(users))
       .catch(() => setApiUsers(users));
+    fetchQuote()
+      .then((data) =>
+        setQuote({
+          content: data.content,
+          author: data.author,
+        })
+      )
+      .catch(() =>
+        setQuote({
+          content:
+            "Success is the sum of small efforts repeated day in and day out.",
+          author: "Robert Collier",
+        })
+      );
   }, []);
   return (
     <div className="dashboard-page">
@@ -29,7 +47,13 @@ function DashboardPage() {
         <h1>Welcome back, {loggedUser.fullName}!</h1>
         <p>Here is what’s happening in your network.</p>
       </section>
+      <section className="quote-card">
+        <h2>Quote of the day</h2>
 
+        <p>"{quote.content}"</p>
+
+        <span>- {quote.author}</span>
+      </section>
       <section className="dashboard-top-row">
         <div className="grow-card">
           <h2>Grow your network</h2>

@@ -129,3 +129,29 @@
   background: #d1d5db;
 }
 
+.quote-card {
+  margin-top: 40px;
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.14);
+}
+
+.quote-card h2 {
+  color: #050505;
+  margin-bottom: 18px;
+}
+
+.quote-card p {
+  font-size: 18px;
+  color: #6b7280;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.quote-card span {
+  display: block;
+  margin-top: 18px;
+  color: #6f35e8;
+  font-weight: 700;
+}

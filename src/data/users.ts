@@ -9,7 +9,7 @@ export const users: User[] = [
     password: "123456",
     title: "Frontend Developer",
     location: "Belgrade, Serbia",
-    connections: 124,
+    connections: [2, 4, 7, 9],
     about:
       "Passionate frontend developer specialized in React and TypeScript with experience in building modern web applications.",
     experience: "Frontend Developer · Data Flow · 2022 - Present",
@@ -23,7 +23,7 @@ export const users: User[] = [
     password: "123456",
     title: "UI/UX Designer",
     location: "Novi Sad, Serbia",
-    connections: 98,
+    connections: [1, 3, 6, 8],
     about:
       "Creative designer focused on intuitive interfaces and user experience.",
     experience: "UI/UX Designer · Creative Studio · 2021 - Present",
@@ -37,7 +37,7 @@ export const users: User[] = [
     password: "123456",
     title: "Project Manager",
     location: "Niš, Serbia",
-    connections: 152,
+    connections: [2, 5, 7, 10],
     about:
       "Experienced project manager with strong leadership and communication skills.",
     experience: "Project Manager · TechNova · 2020 - Present",
@@ -51,7 +51,7 @@ export const users: User[] = [
     password: "123456",
     title: "Backend Developer",
     location: "Belgrade, Serbia",
-    connections: 86,
+    connections: [1, 5, 8],
     about:
       "Backend developer focused on scalable APIs and cloud solutions.",
     experience: "Backend Developer · Apex Solutions · 2021 - Present",
@@ -65,7 +65,7 @@ export const users: User[] = [
     password: "123456",
     title: "Data Analyst",
     location: "Kragujevac, Serbia",
-    connections: 67,
+    connections: [3, 4, 6, 9],
     about:
       "Data enthusiast with a passion for analytics and visualization.",
     experience: "Data Analyst · Insight Labs · 2022 - Present",
@@ -79,7 +79,7 @@ export const users: User[] = [
     password: "123456",
     title: "Marketing Specialist",
     location: "Novi Sad, Serbia",
-    connections: 104,
+    connections: [2, 5, 7],
     about:
       "Digital marketing specialist with experience in social media campaigns.",
     experience: "Marketing Specialist · Growth Hub · 2021 - Present",
@@ -93,7 +93,7 @@ export const users: User[] = [
     password: "123456",
     title: "DevOps Engineer",
     location: "Remote",
-    connections: 93,
+    connections: [1, 3, 6, 8, 10],
     about:
       "DevOps engineer passionate about cloud infrastructure and CI/CD.",
     experience: "DevOps Engineer · CloudNet · 2020 - Present",
@@ -107,7 +107,7 @@ export const users: User[] = [
     password: "123456",
     title: "Mobile Developer",
     location: "Belgrade, Serbia",
-    connections: 111,
+    connections: [2, 4, 7, 9],
     about:
       "Mobile developer building Android and iOS applications.",
     experience: "Mobile Developer · AppWorks · 2021 - Present",
@@ -121,7 +121,7 @@ export const users: User[] = [
     password: "123456",
     title: "Machine Learning Engineer",
     location: "Remote",
-    connections: 135,
+    connections: [1, 5, 8, 10],
     about:
       "Machine learning engineer interested in AI and deep learning.",
     experience: "ML Engineer · AI Labs · 2022 - Present",
@@ -135,7 +135,7 @@ export const users: User[] = [
     password: "123456",
     title: "Graphic Designer",
     location: "Niš, Serbia",
-    connections: 79,
+    connections:  [3, 7, 9],
     about:
       "Graphic designer creating modern branding and visual identities.",
     experience: "Graphic Designer · Pixel Agency · 2021 - Present",

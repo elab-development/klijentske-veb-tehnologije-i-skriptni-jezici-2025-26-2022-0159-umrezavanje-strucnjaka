@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import InputField from "../components/InputField";
 import "./Auth.css";
+import { users } from "../data/users";
 import logo from "../assets/LOGO.png";
 
 function LoginPage() {
@@ -21,26 +22,38 @@ function LoginPage() {
 
     const savedUser = localStorage.getItem("registeredUser");
 
-    if (!savedUser) {
-      alert("User not found");
+    const registeredUser = savedUser
+      ? JSON.parse(savedUser)
+      : null;
+
+    const localUser =
+      registeredUser &&
+        (registeredUser.email === identifier ||
+          registeredUser.username === identifier) &&
+        registeredUser.password === password
+        ? registeredUser
+        : null;
+
+    const existingUser = users.find(
+      (user) =>
+        (user.email === identifier ||
+          user.username === identifier) &&
+        user.password === password
+    );
+
+    const userToLogin = localUser || existingUser;
+
+    if (!userToLogin) {
+      alert("Invalid email, username or password");
       return;
     }
 
-    const registeredUser = JSON.parse(savedUser);
+    localStorage.setItem(
+      "loggedUser",
+      JSON.stringify(userToLogin)
+    );
 
-    if (
-      (registeredUser.email === identifier || registeredUser.username===identifier)&&
-      registeredUser.password === password
-    ) {
-      localStorage.setItem(
-        "loggedUser",
-        JSON.stringify(registeredUser)
-      );
-
-      navigate("/dashboard");
-    } else {
-      alert("Invalid email or password");
-    }
+    navigate("/dashboard");
   }
 
   return (
