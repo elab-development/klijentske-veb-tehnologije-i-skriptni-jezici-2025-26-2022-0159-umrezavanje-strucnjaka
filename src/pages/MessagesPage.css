@@ -1,0 +1,152 @@
+.messages-page {
+  height: calc(100vh - 86px);
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  background: #f6f7fb;
+}
+
+.messages-sidebar {
+  border-right: 1px solid #d9dce3;
+  padding: 28px 22px;
+}
+
+.messages-sidebar h1 {
+  font-size: 30px;
+  margin-bottom: 26px;
+}
+
+.conversation-card {
+  background: white;
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.conversation-card:hover {
+  background: #ede9ff;
+}
+
+.conversation-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #6f35e8;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.conversation-card h3 {
+  font-size: 16px;
+}
+
+.conversation-card p {
+  color: #9ca3af;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.messages-content {
+  display: flex;
+  flex-direction: column;
+  background: #f6f7fb;
+}
+
+.chat-header {
+  height: 96px;
+  border-bottom: 1px solid #d9dce3;
+  padding: 22px 32px;
+  background: #f6f7fb;
+}
+
+.chat-header h2 {
+  font-size: 22px;
+}
+
+.chat-header p {
+  margin-top: 4px;
+  color: #9ca3af;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+}
+
+.chat-input {
+  padding: 18px 24px;
+  display: flex;
+  gap: 14px;
+}
+
+.chat-input input {
+  flex: 1;
+  height: 46px;
+  border: none;
+  border-radius: 10px;
+  padding: 0 16px;
+  outline: none;
+}
+
+.chat-input button {
+  width: 90px;
+  border: none;
+  border-radius: 10px;
+  background: #6f35e8;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.conversation-card.active {
+  background: #ede9ff;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+}
+
+.message-bubble {
+  max-width: 60%;
+  padding: 14px 16px;
+  border-radius: 14px;
+}
+
+.message-bubble p {
+  margin-bottom: 6px;
+}
+
+.message-bubble span {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.message-bubble.theirs {
+  align-self: flex-start;
+  background: white;
+}
+
+.message-bubble.mine {
+  align-self: flex-end;
+  background: #6f35e8;
+  color: white;
+}
+
+.message-bubble.mine span {
+  color: #e5e7eb;
+}
