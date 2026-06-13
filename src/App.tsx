@@ -8,6 +8,8 @@ import OpportunityDetailsPage from "./pages/OpportunityDetailsPage";
 import MessagesPage from "./pages/MessagesPage";
 import ProfilePage from "./pages/ProfilePage";
 import MainLayout from "./layouts/MainLayout";
+import ExpertsPage from "./pages/ExpertsPage";
+import ExpertsDetailsPage from "./pages/ExpertsDetailsPage";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path="/opportunities/:id" element={<OpportunityDetailsPage />} />
           <Route path="/messages" element={<MessagesPage />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/experts" element={<ExpertsPage />} />
+          <Route path="/experts/:id" element={<ExpertsDetailsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

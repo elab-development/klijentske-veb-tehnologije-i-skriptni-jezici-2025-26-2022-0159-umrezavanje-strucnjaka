@@ -6,8 +6,9 @@ export interface User {
   password: string;
   title: string;
   location: string;
-  avatar: string;
   connections: number;
   about: string;
   experience: string;
+  skills: string[];
 }
+

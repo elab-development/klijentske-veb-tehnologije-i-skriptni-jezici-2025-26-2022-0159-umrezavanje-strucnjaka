@@ -154,3 +154,13 @@
   background: #eadfff;
   color: #7c6cf2;
 }
+
+.opportunity-card.mini {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.opportunity-card.mini:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}

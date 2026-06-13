@@ -1,16 +1,21 @@
 import type { User } from "../interfaces/User";
 import "./UserCard.css";
 
-
 interface UserCardProps {
   user: User;
   compact?: boolean;
 }
 
 function UserCard({ user, compact = false }: UserCardProps) {
+  const initials = user.fullName
+    .split(" ")
+    .map((name: string) => name[0])
+    .join("")
+    .toUpperCase();
+
   return (
     <article className={compact ? "user-card compact" : "user-card"}>
-      <div className="user-avatar">{user.avatar}</div>
+      <div className="user-avatar">{initials}</div>
 
       <div>
         <h3>{user.fullName}</h3>

@@ -24,6 +24,8 @@ function getCategoryClass(category: string) {
   }
 }
 
+
+
 function OpportunityCard({
   opportunity,
   mini = false,
@@ -33,9 +35,15 @@ function OpportunityCard({
   );
   const navigate = useNavigate();
   const iconLetter = opportunity.category[0];
+  function handleClick() {
+    navigate(`/opportunities/${opportunity.id}`);
+  }
   if (mini) {
     return (
-      <article className="opportunity-card mini">
+      <article
+        className="opportunity-card mini"
+        onClick={handleClick}
+      >
         <div className={`mini-icon ${categoryClass}`}>
           {opportunity.category[0]}
         </div>
@@ -55,7 +63,10 @@ function OpportunityCard({
   }
 
   return (
-    <article className="opportunity-card">
+    <article
+      className="opportunity-card"
+      onClick={handleClick}
+    >
       <div className={`opportunity-icon ${categoryClass}`}>
         {iconLetter}
       </div>

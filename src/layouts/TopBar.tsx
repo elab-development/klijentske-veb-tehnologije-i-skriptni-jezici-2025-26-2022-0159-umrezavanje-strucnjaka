@@ -9,7 +9,12 @@ function TopBar() {
       fullName: "Guest User",
       avatar: "GU",
     };
-    
+  const initials = loggedUser.fullName
+    .split(" ")
+    .map((name: string) => name[0])
+    .join("")
+    .toUpperCase();
+
   return (
     <header className="topbar">
       <div className="topbar-search">
@@ -21,7 +26,7 @@ function TopBar() {
       </div>
 
       <div className="topbar-user">
-        <div className="topbar-avatar">{loggedUser.avatar}</div>
+        <div className="topbar-avatar">{initials}</div>
         <span>{loggedUser.fullName}</span>
       </div>
     </header>

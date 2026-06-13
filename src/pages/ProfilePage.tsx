@@ -1,5 +1,5 @@
 import UserCard from "../components/UserCard";
-import { recommendedUsers } from "../data/users";
+import { users } from "../data/users";
 import "./ProfilePage.css";
 
 function ProfilePage() {
@@ -20,7 +20,7 @@ function ProfilePage() {
     .map((name: string) => name[0])
     .join("")
     .toUpperCase();
-  const connectionsCount = recommendedUsers.length;
+  const connectionsCount = users.length;
 
   return (
     <div className="profile-page">
@@ -68,7 +68,7 @@ function ProfilePage() {
         <div className="profile-side-card">
           <h2>Connections</h2>
 
-          {recommendedUsers.slice(0, 3).map((user) => (
+          {users.slice(0, 3).map((user) => (
             <UserCard key={user.id} user={user} compact />
           ))}
         </div>

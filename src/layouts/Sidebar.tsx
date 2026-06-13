@@ -10,6 +10,7 @@ function Sidebar() {
     const menuItems = [
         { label: "Home", path: "/dashboard", icon: Home },
         { label: "Opportunities", path: "/opportunities", icon: Briefcase },
+        { label: "Experts", path: "/experts", icon: User },
         { label: "Messages", path: "/messages", icon: MessageCircle },
         { label: "Profile", path: "/profile", icon: User },
     ];

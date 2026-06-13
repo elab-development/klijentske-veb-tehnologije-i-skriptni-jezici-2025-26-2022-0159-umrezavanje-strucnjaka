@@ -1,0 +1,23 @@
+.experts-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.experts-header h1 {
+  font-size: 30px;
+  color: #050505;
+}
+
+.experts-header p {
+  margin-top: 6px;
+  font-size: 16px;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.experts-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}

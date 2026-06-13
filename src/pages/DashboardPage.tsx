@@ -1,6 +1,6 @@
 import UserCard from "../components/UserCard";
 import OpportunityCard from "../components/OpportunityCard";
-import { recommendedUsers } from "../data/users";
+import { users } from "../data/users";
 import { opportunities } from "../data/opportunities";
 import { useEffect, useState } from "react";
 import type { User } from "../interfaces/User";
@@ -21,7 +21,7 @@ function DashboardPage() {
   useEffect(() => {
     fetchRecommendedUsers()
       .then((users) => setApiUsers(users))
-      .catch(() => setApiUsers(recommendedUsers));
+      .catch(() => setApiUsers(users));
   }, []);
   return (
     <div className="dashboard-page">
@@ -34,7 +34,7 @@ function DashboardPage() {
         <div className="grow-card">
           <h2>Grow your network</h2>
           <p>Connect with professionals and discover new opportunities.</p>
-          <button>Find experts</button>
+          <button onClick={() => navigate("/experts")}>Find experts</button>
         </div>
 
         <div className="recommended-card">
@@ -43,9 +43,13 @@ function DashboardPage() {
             <button>View all</button>
           </div>
 
-          {apiUsers.slice(0, 2).map((user) => (
-            <UserCard key={user.id} user={user} compact />
-          ))}
+          {apiUsers.length === 0 ? (
+            <p>Loading recommendations...</p>
+          ) : (
+            apiUsers.slice(0, 2).map((user) => (
+              <UserCard key={user.id} user={user} compact />
+            ))
+          )}
         </div>
       </section>
 
