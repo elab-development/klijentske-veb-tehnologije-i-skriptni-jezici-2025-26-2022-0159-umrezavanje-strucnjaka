@@ -1,7 +1,10 @@
 import { useParams } from "react-router-dom";
 import { MapPin, Mail, MessageCircle, UserPlus } from "lucide-react";
 import { users } from "../data/users";
+import { useState } from "react";
 import "./ExpertDetailsPage.css";
+
+
 
 function ExpertDetailsPage() {
   const { id } = useParams();
@@ -12,11 +15,44 @@ function ExpertDetailsPage() {
     return <h1>Expert not found.</h1>;
   }
 
+  const expertId = user.id;
+
   const initials = user.fullName
     .split(" ")
     .map((name) => name[0])
     .join("")
     .toUpperCase();
+
+  const savedUser = localStorage.getItem("loggedUser");
+
+  const loggedUser = savedUser ? JSON.parse(savedUser) : null;
+
+  const userConnections: number[] = loggedUser?.connections ?? [];
+
+  const isConnected = userConnections.includes(expertId);
+
+  const [connected, setConnected] = useState(isConnected);
+
+  function handleConnect() {
+    if (!loggedUser) return;
+
+    const currentConnections: number[] =
+      loggedUser.connections ?? [];
+
+    if (!currentConnections.includes(expertId)) {
+      const updatedUser = {
+        ...loggedUser,
+        connections: [...currentConnections, expertId],
+      };
+
+      localStorage.setItem(
+        "loggedUser",
+        JSON.stringify(updatedUser)
+      );
+
+      setConnected(true);
+    }
+  }
 
   return (
     <div className="expert-details-page">
@@ -38,8 +74,12 @@ function ExpertDetailsPage() {
         </div>
 
         <div className="expert-actions">
-          <button className="connect-btn">
-            <UserPlus size={18} /> Connect
+          <button
+            className={connected ? "connected-btn" : "connect-btn"}
+            onClick={handleConnect}
+          >
+            <UserPlus size={18} />
+            {connected ? "Connected" : "Connect"}
           </button>
           <button className="message-btn">
             <MessageCircle size={18} /> Message

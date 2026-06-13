@@ -70,7 +70,12 @@ function DashboardPage() {
             <p>Loading recommendations...</p>
           ) : (
             apiUsers.slice(0, 2).map((user) => (
-              <UserCard key={user.id} user={user} compact />
+              <UserCard
+                key={user.id}
+                user={user}
+                compact
+                clickable={false}
+              />
             ))
           )}
         </div>

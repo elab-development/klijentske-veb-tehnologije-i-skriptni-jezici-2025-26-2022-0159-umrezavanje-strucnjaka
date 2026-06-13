@@ -166,3 +166,14 @@
   color: #6b7280;
   font-weight: 600;
 }
+
+.connected-btn {
+  width: 140px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid #6f35e8;
+  background: white;
+  color: #6f35e8;
+  font-weight: 700;
+  cursor: pointer;
+}

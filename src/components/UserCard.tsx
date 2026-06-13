@@ -5,9 +5,10 @@ import "./UserCard.css";
 interface UserCardProps {
   user: User;
   compact?: boolean;
+  clickable?: boolean;
 }
 
-function UserCard({ user, compact = false }: UserCardProps) {
+function UserCard({ user, compact = false, clickable = true, }: UserCardProps) {
   const navigate = useNavigate();
 
   function handleClick() {
@@ -23,7 +24,7 @@ function UserCard({ user, compact = false }: UserCardProps) {
   return (
     <article
       className={compact ? "user-card compact" : "user-card"}
-      onClick={handleClick}
+      onClick={clickable ? handleClick : undefined}
     >
       <div className="user-avatar">{initials}</div>
 
